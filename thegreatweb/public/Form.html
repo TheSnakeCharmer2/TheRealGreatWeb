@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Forms</title>
+
+</head>
+<body>
+<h2>Forms and Input in HTML</h2>
+<img src="./Photo/p-form.jpg" alt="Why not?" style="float:right;width:200px;height:150px">
+<hr >
+<p>Below are two different text fields, each for a person to enter his/her first and last name:</p>
+<form>
+    First Name: <input type="text" name="firstname"><br>
+    Last Name: <input type="text" name="lastname"><br>
+    Your Favorite Music Artist: <input type="text" name="artist"
+</form>
+<p>This next example is a password field, which is made to hide the characters typed into the field:</p>
+<form>
+    Password: <input type="password" name="pwd"
+</form>
+<p>The bubbles below are what are known as radio buttons, which are given options for people to pick one of:</p>
+<form>
+    <input type="radio" name="sex" value="male">Male<br>
+    <input type="radio" name="sex" value="female">Female<br>
+    <input type="radio" name="sex" value="other">Other
+</form>
+<p>These are some checkboxes, close to the function of radio buttons, but multiple can be selected:</p>
+<form>
+    <input type="checkbox" name="instrument" value="Guitar">I play guitar<br>
+    <input type="checkbox" name="instrument" value="Bass">I play bass<br>
+    <input type="checkbox" name="instrument" value="Piano">I play Piano<br>
+    <input type="checkbox" name="instrument" value="Violin">I play violin<br>
+    <input type="checkbox" name="instrument" value="Other">I play other instruments that are not listed<br>
+</form>
+<p>The thing that is required for every form is a submit button, which is pretty self-explanatory having entered lots of information:</p>
+<form name="input" action="Username.html" method="get">
+    Username: <input type="text" name="user"><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

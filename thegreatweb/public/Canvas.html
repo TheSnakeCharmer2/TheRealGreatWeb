@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Canvas Tutorial</title>
+</head>
+<body>
+<h2>Canvas in HTML</h2>
+<img src="./Photo/canvas.jpeg" alt="Why not?" style="float:right;width:200px;height:150px">
+<hr >
+<h3>This is an example of a simple, blank canvas in HTML, which is an element used to draw graphics using <code>&ltcanvas&gt</code> to create it:</h3>
+<canvas id="myCanvas" width="200" height="100"
+        style="border:1px solid #000000;">
+</canvas>
+<p>The code for a simple canvas is fairly straight-forward.</p>
+<code>
+    &ltcanvas id="myCanvas" width="200" height="100"<br>
+            style="border:1px solid #000000;"&gt<br>
+    &lt/canvas&gt<br>
+</code>
+<p>This is applied to all canvases but with more to go with it.</p>
+<hr >
+<h3>Canvases can be colored as well by using <code>&ltstyle&gt</code> along with the color coding as well (red would be <code>#FF0000</code>):</h3>
+<p>The border of a canvas can be colored alone:</p>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #FF0000;">
+</canvas>
+<p>The code is really simple for this red-outlined canvas.</p>
+<code>
+    &ltcanvas id="myCanvas2" width="200" height="100" style="border:1px solid #FF0000;"&gt<br>
+    &lt/canvas&gt<br>
+</code>
+<p>The whole canvas would be filled as well:</p>
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #c3c3c3;">
+
+</canvas>
+
+<script>
+
+    var c = document.getElementById("myCanvas3");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0,0,200,100);
+
+</script>
+<p>The coding for this filled canvas is quite self-explanatory when you look at it.</p>
+<code>
+    &ltcanvas id="myCanvas3" width="200" height="100" style="border:1px solid #c3c3c3;"&gt<br>
+
+    &lt/canvas&gt<br>
+
+    &ltscript&gt<br>
+
+        var c = document.getElementById("myCanvas3");<br>
+        var ctx = c.getContext("2d");<br>
+        ctx.fillStyle = "#FF0000";<br>
+        ctx.fillRect(0,0,200,100);<br>
+
+    &lt/script&gt<br>
+</code>
+
+<hr >
+<h3>Simple Gradients can be made as well using Javascript to style it:</h3>
+<p>Linear gradients start from one end as one color, and fade to a different color towards the other side, they are created by writing "ctx.createLinearGradient". This one goes black to white from the left to the right, and direction is defined only from 0 to 1:</p>
+
+<canvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;">
+</canvas>
+
+<script>
+
+    var c = document.getElementById("myCanvas4");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createLinearGradient(20,20,200,0);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(0,0,200,100);
+
+</script>
+<p>This definitely gets more complex, where the gradient starts and stops has to set along with the color. And the amount of space that the gradient of the canvas takes up can be changed.</p>
+<code>
+    &ltcanvas id="myCanvas4" width="200" height="100" style="border:1px solid #d3d3d3;"&gt<br>
+    &lt/canvas&gt<br>
+
+    &ltscript&gt<br>
+
+    var c = document.getElementById("myCanvas4");<br>
+    var ctx = c.getContext("2d");<br>
+
+    // Create gradient<br>
+    var grd = ctx.createLinearGradient(20,20,200,0);<br>
+    grd.addColorStop(0,"black");<br>
+    grd.addColorStop(1,"white");<br>
+
+    // Fill with gradient<br>
+    ctx.fillStyle = grd;<br>
+    ctx.fillRect(0,0,200,100);<br>
+
+    &lt/script&gt<br>
+</code>
+<hr >
+
+<p>Radial gradients are a circular gradient, and they start in the designated spot that they are located.</p>
+<canvas id="myCanvas5" width="200" height="100" style="border:1px solid #d3d3d3;">
+</canvas>
+
+<script>
+
+    var c = document.getElementById("myCanvas5");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(0,0,200,100);
+
+</script>
+<p>The code for this is rather complex, because location of where the gradient start has to be set and how much space it takes in the canvas.</p>
+<code>
+    &ltcanvas id="myCanvas5" width="200" height="100" style="border:1px solid #d3d3d3;"&gt<br>
+    &lt/canvas&gt<br>
+
+    &ltscript&gt<br>
+
+        var c = document.getElementById("myCanvas5");<br>
+        var ctx = c.getContext("2d");<br>
+
+        // Create gradient<br>
+        var grd = ctx.createRadialGradient(75,50,5,90,60,100);<br>
+        grd.addColorStop(0,"black");<br>
+        grd.addColorStop(1,"white");<br>
+
+        // Fill with gradient<br>
+        ctx.fillStyle = grd;<br>
+        ctx.fillRect(0,0,200,100);<br>
+
+    &lt/script&gt<br>
+
+</code>
+<hr >
+<h4>There is a lot more that canvases can do, but these are the basics of what they are capable of.</h4>
+
+</body>
+</html>
